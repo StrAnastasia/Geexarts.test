@@ -1,0 +1,15 @@
+.LanguageSelect {
+  width: 69px;
+  height: 20px;
+}
+
+/* .LanguageSelect > input {
+} */
+
+.LanguageSelect > #select {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0px 34px 0px 0px;
+  border: "none";
+}
