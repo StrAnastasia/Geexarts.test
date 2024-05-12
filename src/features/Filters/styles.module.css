@@ -1,0 +1,30 @@
+.filterButtonWrapper {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.filterButtonWrapper button {
+  border: none;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.filterButtonWrapper button svg {
+  color: var(--light-icon);
+  width: 20px;
+  height: 20px;
+}
+
+.filterButtonWrapper .active,
+.filterButtonWrapper .active svg {
+  background-color: var(--base-gray);
+  color: var(--black);
+}

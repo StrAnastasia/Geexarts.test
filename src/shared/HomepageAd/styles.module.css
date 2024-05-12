@@ -1,0 +1,34 @@
+.wrapper {
+  background-image: url("/public/images/backgrounds/HomepageAd.png");
+  border-radius: 20px;
+}
+
+.banner {
+  margin: 378px 0 40px;
+}
+
+.banner svg {
+  height: 32px;
+}
+
+.sport,
+.city {
+  height: 32px;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  gap: 8px;
+}
+
+.sport {
+  background-color: white;
+}
+
+.city {
+  background-color: var(--light-icon);
+}
+
+.description {
+  background-color: white;
+  padding: 12px 32px;
+}

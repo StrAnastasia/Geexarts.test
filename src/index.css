@@ -2,3 +2,17 @@ body {
   margin: 0;
   font-family: "Inter", sans-serif;
 }
+
+.MuiModal-backdrop {
+  backdrop-filter: blur(3px);
+}
+
+:root {
+  --base-gray: #f1f3f7;
+  --secondary-gray: #f8f8f9;
+  --black: #06082c;
+  --light-text: #7b7ea5;
+  --light-icon: #9395b8;
+  --read-more: #353754;
+  --red: #d21010;
+}

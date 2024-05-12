@@ -1,0 +1,46 @@
+.followUserWrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+  gap: 10px;
+}
+
+.imageWrapper {
+  position: relative;
+}
+
+.imageWrapper img {
+  width: 41px;
+  height: 41px;
+}
+
+.imageWrapper svg {
+  position: absolute;
+  bottom: 4px;
+  left: 26px;
+}
+
+.maxWidth {
+  width: -webkit-fill-available;
+}
+
+.statusBlock {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dotContainer {
+  display: flex;
+  align-items: center;
+  width: 2px;
+  min-width: 2px;
+}
+
+.statusBlock>.ellipsis {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

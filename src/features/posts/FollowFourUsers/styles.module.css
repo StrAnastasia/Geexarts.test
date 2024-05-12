@@ -1,0 +1,24 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.grid > div {
+  border-radius: 14px;
+  background-size: 100% auto;
+}
+
+.grid .red {
+  background-image: url("/public/images/backgrounds/red.png");
+}
+
+.grid .blue {
+  background-image: url("/public/images/backgrounds/blue.png");
+}
+
+.grid .yellow {
+  background-image: url("/public/images/backgrounds/yellow.png");
+}
+
+

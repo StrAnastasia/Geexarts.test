@@ -1,0 +1,40 @@
+.medal {
+  width: 32px;
+  height: 32px;
+  border-radius: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.firstPlace .medal {
+  background: rgb(190, 130, 59);
+  background: linear-gradient(
+    141deg,
+    rgba(190, 130, 59, 1) 0%,
+    rgba(208, 164, 97, 1) 64%,
+    rgba(254, 213, 165, 1) 100%
+  );
+}
+.secondPlace .medal {
+  background: rgb(135, 135, 136);
+  background: linear-gradient(
+    141deg,
+    rgba(135, 135, 136, 1) 0%,
+    rgba(191, 192, 197, 1) 64%,
+    rgba(147, 148, 153, 1) 100%
+  );
+}
+
+.thirdPlace .medal {
+  background: rgb(116, 57, 29);
+  background: linear-gradient(
+    141deg,
+    rgba(116, 57, 29, 1) 0%,
+    rgba(196, 98, 54, 1) 64%,
+    rgba(255, 155, 103, 1) 100%
+  );
+}

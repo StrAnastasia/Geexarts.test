@@ -1,0 +1,24 @@
+.graySVGs svg:first-child, .graySVGs svg:last-child {
+  color: var(--light-icon);
+}
+
+.notif {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  width: 36px;
+  height: 36px;
+}
+
+.notif svg:first-child {
+  width: 20px;
+  height: 20px;
+}
+
+.notif svg:last-child {
+  position: absolute;
+  top: 9px;
+  right: 5px;
+}

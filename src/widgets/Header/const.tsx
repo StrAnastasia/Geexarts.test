@@ -13,22 +13,22 @@ export const tabs = [
   },
   {
     label: "Маркетплейс",
-    href: "/",
+    href: "/marketplace",
     icon: <ShoppingBagOutlinedIcon />,
   },
   {
     label: "Рейтинги",
-    href: "/",
+    href: "/ratings",
     icon: <GroupOutlinedIcon />,
   },
   {
     label: "Cоревнования",
-    href: "/",
+    href: "/competitions",
     icon: <EmojiEventsOutlinedIcon />,
   },
   {
     label: "Организации",
-    href: "/",
+    href: "/organisations",
     icon: <AccountBalanceOutlinedIcon />,
   },
 ];

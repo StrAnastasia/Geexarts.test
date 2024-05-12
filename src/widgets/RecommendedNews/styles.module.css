@@ -1,0 +1,41 @@
+.article {
+  padding: 10px;
+  background-color: var(--secondary-gray);
+  border-radius: 12px;
+}
+
+.article:first-child {
+  margin-top: 24px;
+}
+
+.article > p:first-child {
+  margin-bottom: 12px;
+}
+
+.article > div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.article > div > svg {
+  color: var(--light-icon);
+  width: 16px;
+  height: 16px;
+}
+
+.article > div:last-child {
+  margin-top: 8px;
+}
+
+.button {
+  background-color: var(--base-gray);
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  border: none;
+  cursor: pointer;
+}

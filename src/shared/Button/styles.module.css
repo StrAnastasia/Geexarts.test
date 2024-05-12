@@ -1,0 +1,44 @@
+.button {
+  padding: 10px 24px;
+  border-radius: 10px;
+  min-height: 40px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.start {
+  justify-content: start;
+}
+.center {
+  justify-content: center;
+}
+.end {
+  justify-content: end;
+}
+
+.black {
+  background-color: var(--black);
+  color: white;
+}
+
+.gray {
+  background-color: var(--base-gray);
+  color: var(--black);
+}
+
+.white {
+  background-color: var(--white);
+  color: var(--light-text);
+}
+
+.white svg {
+  color: var(--light-icon);
+}

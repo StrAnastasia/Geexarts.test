@@ -1,9 +1,9 @@
-import React, { FC, useCallback } from "react";
+import React, { FC, useCallback, useMemo } from "react";
 
 import {
   AppBar,
+  Avatar,
   Box,
-  Button,
   Container,
   IconButton,
   MenuItem,
@@ -13,16 +13,23 @@ import {
 } from "@mui/material";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
-import { theme } from "../../App";
-import { TextInterSB14pt } from "../../shared/TextInterSB14pt";
+import { TextInterSB } from "../../shared/TextInterSB";
 import { LanguageSelect } from "../../features/LanguageSelect";
-import { tabs } from "./headerTabs";
+import { tabs } from "./const";
 import { LoginButton } from "../../features/LoginButton";
+import { HeaderButton } from "./HeaderButton";
+import NotificationsNoneOutlinedIcon from "@mui/icons-material/NotificationsNoneOutlined";
+import ExpandMoreOutlinedIcon from "@mui/icons-material/ExpandMoreOutlined";
+import { RedDot } from "./RedDor";
+import styles from "./styles.module.css";
 
 export const Header: FC = () => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null
   );
+
+  const isAuth = useMemo(() => localStorage.getItem("auth"), []);
+
   const handleOpenNavMenu = useCallback(
     (event: React.MouseEvent<HTMLElement>) => {
       setAnchorElNav(event.currentTarget);
@@ -35,10 +42,10 @@ export const Header: FC = () => {
   }, []);
 
   return (
-    <AppBar position="static">
+    <AppBar position="fixed" sx={{ boxShadow: "none" }}>
       <Container
-        maxWidth="xl"
-        sx={{ padding: { xs: "0 24px", xl: "0!important" } }}
+        maxWidth="lg"
+        sx={{ padding: { xs: "0 24px", lg: "0!important" } }}
       >
         <Toolbar disableGutters>
           <Typography
@@ -67,27 +74,40 @@ export const Header: FC = () => {
               justifyContent={"space-between"}
             >
               <Stack direction="row" alignItems="center" spacing={"30px"}>
-                {tabs.map(({ label, icon }) => (
-                  <Button
-                    key={label}
-                    onClick={handleCloseNavMenu}
-                    sx={{
-                      p: 1,
-                      color: theme.palette.primary.contrastText,
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "10px",
-                    }}
-                  >
-                    {icon}
-                    <TextInterSB14pt text={label} />
-                  </Button>
+                {tabs.map((tab) => (
+                  <HeaderButton onClick={handleCloseNavMenu} {...tab} />
                 ))}
               </Stack>
 
               <Stack direction="row" alignItems="center" spacing={2}>
                 <LanguageSelect />
-                <LoginButton />
+                {isAuth ? (
+                  <Stack
+                    direction={"row"}
+                    alignItems={"center"}
+                    spacing={2}
+                    className={styles.graySVGs}
+                  >
+                    <button className={styles.notif}>
+                      <NotificationsNoneOutlinedIcon />
+                      <RedDot />
+                    </button>
+                    <Stack
+                      direction={"row"}
+                      alignItems={"center"}
+                      spacing={1}
+                      sx={{ cursor: "pointer" }}
+                    >
+                      <Avatar
+                        sx={{ width: "36px", height: "36px" }}
+                        src={"/images/Александр Магомедов.png"}
+                      />
+                      <ExpandMoreOutlinedIcon />
+                    </Stack>
+                  </Stack>
+                ) : (
+                  <LoginButton />
+                )}
               </Stack>
             </Stack>
           </Box>
@@ -122,7 +142,11 @@ export const Header: FC = () => {
             >
               {tabs.map(({ label }) => (
                 <MenuItem key={label} onClick={handleCloseNavMenu}>
-                  <TextInterSB14pt text={label} />
+                  <TextInterSB
+                    textAlign="center"
+                    fontWeight={548}
+                    text={label}
+                  />
                 </MenuItem>
               ))}
             </Menu>

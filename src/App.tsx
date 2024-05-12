@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { BaseLayout } from "./layouts";
-import { HomePage } from "./pages/HomePage/HomePage";
+import { HomePage } from "./pages";
 import { ThemeProvider, createTheme } from "@mui/material";
 
 export const theme = createTheme({
@@ -29,7 +29,7 @@ export const theme = createTheme({
       xs: 0,
       sm: 600,
       md: 1040,
-      lg: 1200,
+      lg: 1160,
       xl: 1440,
     },
   },
@@ -42,9 +42,12 @@ export default function App() {
         <Routes>
           <Route path="/" element={<BaseLayout />}>
             <Route index element={<HomePage />} />
-            {/* <Route path="blogs" element={<Blogs />} /> */}
-            {/* <Route path="contact" element={<Contact />} /> */}
-            {/* <Route path="*" element={<NoPage />} /> */}
+            <Route path="blogs" element={<HomePage />} />
+            <Route path="marketplace" element={<HomePage />} />
+            <Route path="ratings" element={<HomePage />} />
+            <Route path="competitions" element={<HomePage />} />
+            <Route path="organisations" element={<HomePage />} />
+            {/* <Route path="*" element={<HomePage />} /> */}
           </Route>
         </Routes>
       </BrowserRouter>
