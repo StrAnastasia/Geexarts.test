@@ -5,7 +5,7 @@ import { orgs } from "./const";
 
 export const FillInUserData: FC<{
   setValidData: React.Dispatch<React.SetStateAction<boolean>>;
-}> = ({}) => {
+}> = () => {
   const [chosen, setChosen] = useState<string[]>([]);
 
   const choose = useCallback(
