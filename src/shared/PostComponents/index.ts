@@ -21,6 +21,6 @@ const Post = {
   BestMoments,
   AdBanner,
   MedalInfo,
-  Video
+  Video,
 };
 export default Post;

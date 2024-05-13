@@ -1,0 +1,17 @@
+.seenAndCommBlock {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.seenAndCommBlock div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.seenAndCommBlock svg {
+  width: 20px;
+  height: 20px;
+}

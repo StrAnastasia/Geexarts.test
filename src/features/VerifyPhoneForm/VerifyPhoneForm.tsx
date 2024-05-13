@@ -46,12 +46,12 @@ export const VerifyPhoneForm: FC<{
           setIsLoading(false);
           localStorage.setItem("auth", "true");
           const isProlongedReg = localStorage.getItem("prolongedReg");
-          if (isProlongedReg) continueReg();
+          if (isProlongedReg) return continueReg();
           close();
         }, 2000);
       }
     },
-    [code]
+    [code, continueReg, close]
   );
 
   useEffect(() => {

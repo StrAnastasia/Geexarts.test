@@ -7,7 +7,7 @@ import { TextInterSB } from "../../shared";
 export const HeaderButton: FC<{
   label: string;
   href: string;
-  onClick: () => void;
+  onClick?: () => void;
   icon: ReactNode;
 }> = ({ label, href, onClick, icon }) => {
   const { pathname } = useLocation();

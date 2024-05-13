@@ -1,0 +1,37 @@
+.bestMomentsBlock {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.bestMomentsBlock > div {
+  background-size: auto 100%;
+  height: 230px;
+  border-radius: 14px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.bestMomentsBlock .seen {
+  display: flex;
+  gap: 4px;
+  background-color: rgb(255 255 255 / 15%);
+  width: max-content;
+  border-radius: 100px;
+  padding: 7px 10px;
+}
+
+.seeAllVideos {
+  background-color: var(--base-gray);
+  color: var(--black);
+  padding: 10px 24px;
+  border-radius: 10px;
+  border: none;
+  width: max-content;
+  margin-top: 24px;
+  cursor: pointer;
+}

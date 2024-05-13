@@ -1,4 +1,3 @@
-
 export enum Steps {
   ChooseSport = "ChooseSport",
   ChooseSportsmen = "ChooseSportsmen",
@@ -118,3 +117,56 @@ export const orgs = [
   },
   { name: 'Гандбольный союз "Ростов-Дон"', img: "/images/108.png" },
 ];
+
+export type DataFieldnames =
+  | "name"
+  | "surname"
+  | "patronymic"
+  | "dateOfBirth"
+  | "gender"
+  | "citizenship";
+
+export const dataFields: Record<DataFieldnames, string> = {
+  name: "",
+  surname: "",
+  patronymic: "",
+  dateOfBirth: "",
+  gender: "",
+  citizenship: "",
+};
+
+export const mockData: Record<DataFieldnames, string> = {
+  name: "Александр",
+  surname: "Магомедов",
+  patronymic: "",
+  dateOfBirth: "12.03.1999",
+  gender: "Мужской",
+  citizenship: "Российская Федерация",
+};
+
+export const translate: Record<DataFieldnames, string> = {
+  name: "Имя",
+  surname: "Фамилия",
+  patronymic: "Отчество (необязательно)",
+  dateOfBirth: "Дата рождения",
+  gender: "Пол",
+  citizenship: "Гражданство",
+};
+
+export const placeholders: Record<DataFieldnames, string> = {
+  name: "Введите имя",
+  surname: "Введите фамилию",
+  patronymic: "Введите отчество",
+  dateOfBirth: "Выберите дату",
+  gender: "Выберите пол",
+  citizenship: "Выберите страну",
+};
+
+export const errorMessages: Record<DataFieldnames, string> = {
+  name: "Это поле является обязательным",
+  surname: "Это поле является обязательным",
+  patronymic: "",
+  dateOfBirth: "Это поле является обязательным",
+  gender: "Это поле является обязательным",
+  citizenship: "Ошибка",
+};

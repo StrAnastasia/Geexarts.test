@@ -9,7 +9,7 @@ import { Stack } from "@mui/material";
 import { ChooseSportsmen } from "./ChooseSportsmen";
 import { ChooseOrganizations } from "./ChooseOrganizations";
 import { FillInUserData } from "./FillInUserData";
-import { Steps, notes, num, titles } from "./const";
+import { Steps, dataFields, mockData, notes, num, titles } from "./const";
 
 const titleStyles = {
   fontSize: "20px",
@@ -18,33 +18,20 @@ const titleStyles = {
   fontWeight: 600,
 };
 
-const dataFields = {
-  name: "",
-  surname: "",
-  patronymic: "",
-  dateOfBirth: "",
-  gender: "",
-  citizenship: "",
-};
-
 export const FinishRegistration: FC<{ close: () => void }> = ({ close }) => {
   const [step, setStep] = useState<Steps>(Steps.ChooseSport);
-  const [data, setData] = useState(false);
+  const [data, setData] = useState(dataFields);
   const [validData, setValidData] = useState(false);
+  const [error, setError] = useState(false);
 
   const next = useCallback(() => {
     if (step === Steps.ChooseSport) return setStep(Steps.ChooseSportsmen);
     if (step === Steps.ChooseSportsmen)
       return setStep(Steps.ChooseOrganozation);
     if (step === Steps.ChooseOrganozation) return setStep(Steps.UsersData);
-  }, [step]);
-
-  useEffect(() => {
-    if (validData) {
-      localStorage.setItem("fullAccount", "true");
-      close();
-    }
-  }, [validData, close]);
+    if (step === Steps.UsersData && !data?.name) return setError(true);
+    if (step === Steps.UsersData && data?.name) return setValidData(true);
+  }, [step, data]);
 
   const prev = useCallback(() => {
     if (step === Steps.ChooseSportsmen) return setStep(Steps.ChooseSport);
@@ -53,14 +40,28 @@ export const FinishRegistration: FC<{ close: () => void }> = ({ close }) => {
     if (step === Steps.UsersData) return setStep(Steps.ChooseOrganozation);
   }, [step]);
 
+  const changeData = useCallback(() => {
+    setError(false);
+    setData(mockData);
+  }, []);
+
   const theForm = useMemo(() => {
     if (step === Steps.ChooseSport) return <ChooseSports />;
     if (step === Steps.ChooseSportsmen) return <ChooseSportsmen />;
     if (step === Steps.ChooseOrganozation) return <ChooseOrganizations />;
     if (step === Steps.UsersData)
-      return <FillInUserData setValidData={setValidData} />;
+      return (
+        <FillInUserData changeData={changeData} data={data} error={error} />
+      );
     return <>info</>;
-  }, [step]);
+  }, [step, changeData, data, error]);
+
+  useEffect(() => {
+    if (validData) {
+      localStorage.setItem("fullAccount", "true");
+      close();
+    }
+  }, [validData, close]);
 
   return (
     <div className={styles.wrapper}>
@@ -98,14 +99,14 @@ export const FinishRegistration: FC<{ close: () => void }> = ({ close }) => {
       >
         <Button
           variant="gray"
-          onClick={step !== Steps.ChooseSport ? prev : next}
+          onClick={step !== Steps.ChooseSport ? prev : close}
         >
           {step === Steps.ChooseSport ? "Пропустить" : "Назад"}
         </Button>
 
         <Stack direction={"row"} spacing={2}>
           {step !== Steps.ChooseSport && (
-            <Button variant="gray" onClick={next}>
+            <Button variant="gray" onClick={close}>
               Пропустить
             </Button>
           )}

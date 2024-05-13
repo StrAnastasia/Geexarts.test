@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import styles from "./styles.module.css";
+import styles from "./CommentsBlock.module.css";
 
 import { TextInterSB } from "../TextInterSB";
 import { Comment } from "../../widgets/Posts/posts";

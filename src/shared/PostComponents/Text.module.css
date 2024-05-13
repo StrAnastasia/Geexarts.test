@@ -1,0 +1,28 @@
+.text,
+.textB {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.5px;
+  text-align: left;
+
+  color: var(--light-text);
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.text {
+  margin: 20px 0;
+}
+
+.textB {
+  font-weight: 500;
+  color: #353754;
+  width: max-content;
+  display: inline;
+  cursor: pointer;
+}

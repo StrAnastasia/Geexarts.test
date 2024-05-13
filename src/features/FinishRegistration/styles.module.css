@@ -29,6 +29,10 @@
   padding: 16px 24px 0;
 }
 
+.mb16 {
+  margin-bottom: 16px;
+}
+
 .grid {
   margin-top: 12px;
   display: grid;
@@ -64,9 +68,16 @@
 
 .sportsmen,
 .organizations {
-  max-height: 354px;
   overflow-y: scroll;
   padding-right: 20px;
+}
+
+.sportsmen {
+  max-height: 420px;
+}
+
+.organizations {
+  max-height: 400px;
 }
 
 .sportsmen > .twoCold,
@@ -96,4 +107,105 @@
 .organizations::-webkit-scrollbar-thumb {
   background: #cccfda;
   border-radius: 10px;
+}
+
+.avatarContainer {
+  width: max-content;
+  position: relative;
+  margin-bottom: 32px;
+  cursor: pointer;
+}
+
+.avatarContainer > .addPhoto {
+  position: absolute;
+  top: 68px;
+  left: 68px;
+  background: #f1f3f7;
+  width: 32px;
+  height: 32px;
+  border-radius: 19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.addPhoto > svg {
+  color: #9395b8;
+  width: 16px;
+  height: 16px;
+}
+
+.dropDownItem {
+  display: flex;
+  width: 140px;
+  padding: 10px 12px;
+}
+
+.dropDownItem:first-child {
+  border-bottom: 1px solid #F1F3F7;
+}
+
+.dropDownItem svg {
+  color: #9395b8;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px
+}
+
+.userDataForm {
+  height: 452px;
+}
+
+.userDataGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 24px;
+}
+
+.userDataGrid .errorMargin {
+  margin-bottom: 16px;
+}
+
+.userDataGrid label {
+  display: block;
+  font-size: 12px;
+  line-height: 18px;
+  color: #7b7ea5;
+  margin-bottom: 6px;
+}
+
+.userDataGrid .inputWrapper {
+  color: var(--black);
+  background: #f1f3f7;
+  padding: 9px 12px;
+  border-radius: 10px;
+  width: -webkit-fill-available;
+  display: flex;
+  cursor: pointer;
+}
+
+.userDataGrid .error {
+  border: 1px solid var(--red);
+}
+
+.userDataGrid input {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--black);
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+.userDataGrid input::placeholder {
+  color: #9395b8;
+}
+
+.userDataGrid svg {
+  color: var(--light-icon);
+  margin-left: 4px;
 }

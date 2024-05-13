@@ -1,5 +1,5 @@
 import React, { FC, useMemo } from "react";
-import styles from "./styles.module.css";
+import styles from "./SeenAndCommentsNumber.module.css";
 
 import RemoveRedEyeOutlinedIcon from "@mui/icons-material/RemoveRedEyeOutlined";
 import ChatBubbleOutlineOutlinedIcon from "@mui/icons-material/ChatBubbleOutlineOutlined";

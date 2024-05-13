@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import styles from "./styles.module.css";
+import styles from "./BestMoments.module.css";
 import { TextInterSB } from "../TextInterSB";
 
 import RemoveRedEyeOutlinedIcon from "@mui/icons-material/RemoveRedEyeOutlined";

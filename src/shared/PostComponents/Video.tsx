@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import styles from "./styles.module.css";
+import styles from "./Video.module.css";
 
 export const Video: FC<{ video: string }> = ({ video }) => {
   return (

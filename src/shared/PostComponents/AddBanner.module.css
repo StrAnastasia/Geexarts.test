@@ -1,0 +1,41 @@
+.ad {
+  border-radius: 20px;
+  letter-spacing: -1%;
+  color: white;
+  height: 286px;
+  background-size: auto 100%;
+  padding: 20px 20px 0 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.ad > div {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.ad .adtext {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 32px;
+  width: 55%;
+  margin: 0;
+  font-style: italic;
+  margin-bottom: 24px;
+  text-align: end;
+}
+
+.ad .sale {
+  font-weight: 600;
+  font-size: 96px;
+  margin: 0;
+  text-align: end;
+}
+
+.ad img {
+  position: absolute;
+  bottom: 0;
+  width: 76%;
+  /* height: 52px; */
+}

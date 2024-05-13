@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import styles from "./styles.module.css";
+import styles from "./AddBanner.module.css";
 
 export const AdBanner: FC<{
   ad?: {

@@ -1,0 +1,65 @@
+.wrapper {
+  padding: 20px 24px;
+  border-radius: 20px;
+  background: white;
+}
+
+.texts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.repositionTwoAvatars,
+.repositionThreeAvatars {
+  height: 22px;
+  min-height: 22px;
+  position: relative;
+}
+
+.repositionTwoAvatars {
+  width: 37px;
+}
+.repositionThreeAvatars {
+  width: 52px;
+}
+
+.repositionTwoAvatars img,
+.repositionThreeAvatars img {
+  width: 20px;
+  height: 20px;
+  border: 1px solid white;
+  border-radius: 20px;
+  position: absolute;
+}
+
+.repositionTwoAvatars img:last-child,
+.repositionThreeAvatars img:last-child {
+  right: 0;
+}
+
+.repositionThreeAvatars img:nth-child(2) {
+  left: 15px;
+}
+
+.repositionTwoAvatars img:first-child,
+.repositionThreeAvatars img:first-child {
+  left: 0;
+}
+
+.birthdayAndPhone {
+  margin: 40px 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.birthdayAndPhone > div {
+  background-color: #f8f8f9;
+  padding: 12px 14px;
+  border-radius: 12px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}

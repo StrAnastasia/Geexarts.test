@@ -14,13 +14,11 @@ enum Steps {
 }
 
 export const LoginButton: FC = () => {
-  const [open, setOpen] = useState(true);
-  // const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false);
   const handleOpen = useCallback(() => setOpen(true), []);
   const handleClose = useCallback(() => setOpen(false), []);
 
-  const [step, setStep] = useState<Steps>(Steps.FinishReg);
-  // const [step, setStep] = useState<Steps>(Steps.Login);
+  const [step, setStep] = useState<Steps>(Steps.Login);
 
   const verify = useCallback(() => setStep(Steps.Verify), []);
   const register = useCallback(() => setStep(Steps.Register), []);

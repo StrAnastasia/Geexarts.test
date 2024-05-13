@@ -7,3 +7,6 @@ export * from "./AwardIcon";
 export * from "./CertificateIcon";
 export * from "./LogoIcon";
 export * from "./BigLogoIcon";
+export * from "./AddPhotoIcon";
+export * from "./TrashIcon";
+export * from "./ShareIcon";

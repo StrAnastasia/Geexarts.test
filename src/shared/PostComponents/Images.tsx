@@ -1,5 +1,5 @@
 import React, { FC, useMemo } from "react";
-import styles from "./styles.module.css";
+import styles from "./Images.module.css";
 
 export const Images: FC<{ photos: string[] }> = ({ photos }) => {
   const photosLeft = useMemo(() => photos.length - 9, [photos]);

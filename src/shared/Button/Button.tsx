@@ -3,9 +3,10 @@ import styles from "./styles.module.css";
 import { TextInterSB } from "../TextInterSB";
 
 export const Button: FC<{
-  children: ReactNode;
-  variant: "black" | "gray" | "white";
+  children?: ReactNode;
+  variant: "black" | "gray" | "white" | "blue";
   fullWidth?: boolean;
+  iconWidth?: boolean;
   justifyContent?: "start" | "center" | "end";
   leftIcon?: ReactNode;
   rightIcon?: ReactNode;
@@ -16,6 +17,7 @@ export const Button: FC<{
   children,
   variant,
   fullWidth = false,
+  iconWidth = false,
   justifyContent = "start",
   leftIcon,
   rightIcon,
@@ -26,6 +28,7 @@ export const Button: FC<{
   <button
     className={`${styles.button} 
     ${fullWidth ? styles.fullWidth : ""} 
+    ${iconWidth ? styles.iconWidth : ""} 
     ${styles[justifyContent]}
     ${styles[variant]}`}
     onClick={onClick}

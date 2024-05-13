@@ -1,0 +1,58 @@
+.commBlock {
+  margin-top: 16px;
+}
+
+.commBlock > div {
+  display: flex;
+  gap: 0 12px;
+}
+
+.commBlock p {
+  margin-bottom: 4px;
+}
+
+.commBlock hr {
+  margin: 16px 0;
+}
+
+.replyBlock {
+  display: flex;
+  gap: 0 6px;
+  margin-top: 4px;
+}
+
+.replyBlock > p {
+  width: max-content;
+}
+
+.replyBlock button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.replyBlock button:active > p {
+  color: var(--light-text);
+}
+
+.nameWithIcon {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.reply {
+  padding-left: 32px;
+  margin-top: 16px;
+}
+
+.seeAllComms {
+  margin-top: 24px;
+  background-color: var(--base-gray);
+  color: var(--black);
+  padding: 10px 24px;
+  border-radius: 10px;
+  border: none;
+  width: max-content;
+  cursor: pointer;
+}

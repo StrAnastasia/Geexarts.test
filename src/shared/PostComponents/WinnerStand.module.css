@@ -1,0 +1,53 @@
+.winnersBlock {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: baseline;
+  gap: 12px 10px;
+  max-width: 588px;
+  margin: 24px auto;
+  word-spacing: 9999px;
+}
+
+.winnersBlock img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 16px;
+}
+
+.secondPlace,
+.firstPlace,
+.thirdPlace {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.medal {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 56px;
+}
+
+.firstPlace img {
+  width: 100px;
+  height: 100px;
+}
+
+.firstPlace .halfCrownLeft,
+.firstPlace .halfCrownRight {
+  position: absolute;
+  top: 20px;
+  width: 68px;
+  height: auto;
+}
+
+.firstPlace .halfCrownLeft {
+  left: 6px;
+}
+
+.firstPlace .halfCrownRight {
+  transform: scaleX(-1);
+  right: 6px;
+}

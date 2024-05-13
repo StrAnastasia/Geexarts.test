@@ -1,0 +1,6 @@
+.sportAnddateContainer {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+}

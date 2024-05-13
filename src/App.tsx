@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { BaseLayout } from "./layouts";
-import { HomePage } from "./pages";
+import { HomePage, FilledInAccount, EmptyAccount } from "./pages";
 import { ThemeProvider, createTheme } from "@mui/material";
 
 export const theme = createTheme({
@@ -45,8 +45,8 @@ export default function App() {
             <Route path="blogs" element={<HomePage />} />
             <Route path="marketplace" element={<HomePage />} />
             <Route path="ratings" element={<HomePage />} />
-            <Route path="competitions" element={<HomePage />} />
-            <Route path="organisations" element={<HomePage />} />
+            <Route path="competitions" element={<FilledInAccount />} />
+            <Route path="organisations" element={<EmptyAccount />} />
             {/* <Route path="*" element={<HomePage />} /> */}
           </Route>
         </Routes>

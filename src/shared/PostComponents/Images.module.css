@@ -1,0 +1,31 @@
+.imagesWrap {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px 10px;
+  position: relative;
+}
+
+.imagesWrap > img {
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+}
+
+.imagesWrap > .morePhotos {
+  position: absolute;
+  width: calc((100% - 20px) / 3);
+  height: calc((100% - 24px) / 3);
+  background-color: rgb(0 0 0 / 60%);
+  bottom: 0;
+  right: 0;
+  border-radius: 14px;
+
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 32px;
+  color: white;
+  letter-spacing: -1%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

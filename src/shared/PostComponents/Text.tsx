@@ -1,5 +1,5 @@
 import React, { FC, useMemo } from "react";
-import styles from "./styles.module.css";
+import styles from "./Text.module.css";
 
 export const Text: FC<{ text: string }> = ({ text }) => {
   const addReedMore = useMemo(() => text.length > 210, [text]);

@@ -16,7 +16,7 @@ export const ChooseSports: FC = () => {
   );
 
   return (
-    <div className={styles.grid}>
+    <div className={`${styles.grid} ${styles.mb16}`}>
       {sports.map((sport, ind) => (
         <div
           style={{ backgroundImage: `url(/images/chooseSport${ind}.png)` }}
