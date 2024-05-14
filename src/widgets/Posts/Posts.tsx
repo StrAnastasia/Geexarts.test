@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { posts } from "./posts";
+import { posts } from "./consts";
 import { PostLayout } from "../../features/posts/PostLayout";
 import { Stack } from "@mui/material";
 

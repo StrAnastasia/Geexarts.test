@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { User } from "../../widgets/Posts/posts";
+import { User } from "../../widgets/Posts/consts";
 import styles from "./styles.module.css";
 import { RUIconRound } from "../../shared/icons/RUIconRound";
 import { TextInterSB } from "../../shared";

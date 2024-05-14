@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import styles from "./MedalInfo.module.css";
 import { TextInterSB } from "../TextInterSB";
-import { MedalData } from "../../widgets/Posts/posts";
+import { MedalData } from "../../widgets/Posts/consts";
 import { MedalIcon } from "../MedalIcon";
 import { Stack } from "@mui/material";
 

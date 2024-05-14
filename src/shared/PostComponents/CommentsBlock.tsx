@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import styles from "./CommentsBlock.module.css";
 
 import { TextInterSB } from "../TextInterSB";
-import { Comment } from "../../widgets/Posts/posts";
+import { Comment } from "../../widgets/Posts/consts";
 import { Avatar } from "@mui/material";
 
 import VerifiedIcon from "@mui/icons-material/Verified";

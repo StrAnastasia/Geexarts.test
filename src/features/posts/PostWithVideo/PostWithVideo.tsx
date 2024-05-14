@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { PostType } from "../../../widgets/Posts/posts";
+import { PostType } from "../../../widgets/Posts/consts";
 import Post from "../../../shared/PostComponents";
 import { TextInterSB } from "../../../shared";
 

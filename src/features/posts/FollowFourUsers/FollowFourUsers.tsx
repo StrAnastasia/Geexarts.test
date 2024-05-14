@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { User } from "../../../widgets/Posts/posts";
+import { User } from "../../../widgets/Posts/consts";
 import Post from "../../../shared/PostComponents";
 import { FollowUserCard } from "../../FollowUserCard";
 import styles from "./styles.module.css";

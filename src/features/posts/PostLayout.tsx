@@ -1,5 +1,5 @@
 import React, { FC, useMemo } from "react";
-import { PostType } from "../../widgets/Posts/posts";
+import { PostType } from "../../widgets/Posts/consts";
 import { PostWithPictures } from "./PostWithPictures";
 import { PostWithContestWinners } from "./PostWithContestWinners";
 import { AdBanner } from "../../shared/PostComponents/AdBanner";

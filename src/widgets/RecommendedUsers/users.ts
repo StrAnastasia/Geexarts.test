@@ -1,4 +1,4 @@
-import { User } from "../Posts/posts";
+import { User } from "../Posts/consts";
 
 export const users: User[] = [
   {
